@@ -18,16 +18,16 @@ class Cloud {
 		this.y = y;
 		this.speed = speed;
 
-		// Inicjalizacja obiektu obrazu chmuryY
+		// Inicjalizacja obiektu obrazu ptaka
 		this.cloudImage = new Image();
 		this.cloudImage.src = "./assets/images/cloud.png"; // Zmień ścieżkę dostępu do obrazu
 	}
 
 	move() {
-		// Przesuń chmurkę poziomo zgodnie z jej prędkością
+		// przesuniecie ptaka poziomo zgodnie z jej prędkością
 		this.x += this.speed;
-		// Jeśli chmurka wyjdzie poza prawy kraniec canvasa, przesuń ją z powrotem na lewą stronę
-		if (this.x > canvas.width) {
+		// Jeśli ptak wyjdzie poza prawy kraniec, przesuń go z powrotem na lewą stronę
+		if (this.x > 600) {
 			this.x = -50;
 		}
 	}
