@@ -1,67 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Snake - Szczepan Piwowarski</title>
-		<style>
-			body {
-				margin: 0px;
-				padding: 0px;
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				overflow: hidden;
-			}
-			#game-container {
-				position: relative;
-				overflow: hidden;
-			}
-			#game {
-				box-shadow: green 20px 10px 50px;
-				z-index: 2;
-			}
-			#dashboard {
-				margin-left: 30px;
-				box-shadow: rgb(6, 0, 128) 20px 10px 50px;
-				z-index: 1;
-			}
-			#birdCanvas {
-				position: absolute;
-				top: 50px;
-				left: 50px;
-				z-index: 0;
-			}
-			#background {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 300%;
-				height: 100%;
-				animation: slideBackground 10s linear infinite;
-				background-image: url("assets/images/backgroundGame.png");
-				background-size: cover;
-				z-index: -1;
-			}
-			@keyframes slideBackground {
-				0% {
-					transform: translateX(0);
-				}
-				100% {
-					transform: translateX(-50%);
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<div id="background"></div>
-		<h1>Snake</h1>
-		<div id="game-container">
-			<canvas id="game" width="400" height="400"></canvas>
-			<canvas id="dashboard" width="200" height="400"></canvas>
-		</div>
-		<canvas id="birdCanvas" width="593" height="200"></canvas>
-		<script src="index.js"></script>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Snake - Szczepan Piwowarski</title>
+        <style>
+            body {
+                margin: 0px;
+                padding: 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+            }
+            #game {
+                box-shadow: green 20px 10px 50px;
+                z-index: 2;
+            }
+            #dashboard {
+                margin-left: 30px;
+                box-shadow: rgb(6, 0, 128) 20px 10px 50px;
+                z-index: 1;
+            }
+            #birdCanvas {
+                position: absolute;
+                top: 50px;
+                left: 50px;
+                z-index: 0;
+            }
+            #background {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 300%;
+                height: 100%;
+                animation: slideBackground 10s linear infinite;
+                background-image: url('assets/images/backgroundGame.png');
+                background-size: cover;
+                z-index: -1;
+            }
+            @keyframes slideBackground {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(-50%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="background"></div>
+        <h1>Snake</h1>
+        <div id="game-container">
+            <canvas id="game" width="400" height="400"></canvas>
+            <canvas id="dashboard" width="200" height="400"></canvas>
+        </div>
+        <canvas id="birdCanvas" width="593" height="200"></canvas>
+        <script src="index.js"></script>
+    </body>
 </html>
