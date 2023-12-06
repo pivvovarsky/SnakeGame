@@ -12,15 +12,15 @@ class SnakePart {
 	}
 }
 
-class Cloud {
+class Bird {
 	constructor(x, y, speed) {
 		this.x = x;
 		this.y = y;
 		this.speed = speed;
 
 		// Inicjalizacja obiektu obrazu ptaka
-		this.cloudImage = new Image();
-		this.cloudImage.src = "./assets/images/cloud.png"; // Zmień ścieżkę dostępu do obrazu
+		this.birdImage = new Image();
+		this.birdImage.src = "./assets/images/bird.png"; // Zmień ścieżkę dostępu do obrazu
 	}
 
 	move() {
@@ -33,21 +33,21 @@ class Cloud {
 	}
 
 	draw() {
-		const cloudCanvas = document.getElementById("cloudCanvas");
-		const ctxCloud = cloudCanvas.getContext("2d");
+		const birdCanvas = document.getElementById("birdCanvas");
+		const ctxBird = birdCanvas.getContext("2d");
 
 		// Wyczyść obszar canvasa, aby narysować nową pozycję chmurki
-		ctxCloud.clearRect(0, 0, cloudCanvas.width, cloudCanvas.height);
+		ctxBird.clearRect(0, 0, birdCanvas.width, birdCanvas.height);
 
 		// Rysuj chmurę jako obraz na canvasie
-		ctxCloud.drawImage(this.cloudImage, this.x - 20, this.y - 20, 40, 40);
+		ctxBird.drawImage(this.birdImage, this.x - 20, this.y - 20, 40, 40);
 	}
 }
 
 // glowna klasa, logika gry
 class SnakeGame {
 	constructor() {
-		this.cloud = new Cloud(50, 50, 3);
+		this.bird = new Bird(50, 50, 3);
 		// ilosc kwadratow na planszy
 		this.tileCount = 20;
 		// wielkosc kwadratu na planszy
@@ -190,8 +190,8 @@ class SnakeGame {
 
 		//rysuj tablice
 		this.drawDashboard();
-		this.cloud.move();
-		this.cloud.draw();
+		this.bird.move();
+		this.bird.draw();
 	}
 
 	clearScreen() {
