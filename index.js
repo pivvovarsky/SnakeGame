@@ -322,8 +322,6 @@ class SnakeGame {
 	}
 
 	isGameOver() {
-		this.gameOver = false;
-
 		if (this.xVelocity === 0 && this.yVelocity === 0) return false; // brak kolizji na start
 
 		if (
@@ -338,7 +336,7 @@ class SnakeGame {
 		for (let i = 0; i < this.snakeParts.length; i++) {
 			let part = this.snakeParts[i];
 			if (part.x === this.headX && part.y === this.headY) {
-				gameOver = true;
+				this.gameOver = true;
 				break;
 			}
 		}
